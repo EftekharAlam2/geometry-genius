@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="border-0 rounded-lg md:m-12 sm:m-0.5 p-4 pl-12 bg-indigo-300 flex"
+    >
+      <h2 class="w-11/12">
+        <span class="text-4xl font-bold">Interactive</span><br />
+        <span class="text-2xl text-slate-500">Geometry Genius</span>
+      </h2>
+      <a
+        href="index.html"
+        class="text-white border-0 rounded-lg bg-blue-600 my-auto px-9 py-2 text-xl"
+      >
+        Home</a
+      >
+    </header>
+    <main>
+      <div class="border-0 rounded-lg bg-red-500 md:mx-12 text-xl p-4 mt-4">
+        <p>
+          Question 01 : What is DOM and what is the purpose of DOM? <br />
+          Ans: <br />
+          DOM stands for Document Object Model. It is a programming interface
+          that helps us to do many things to the elements from the document. The
+          main purpose of the DOM is to select the nodes of the html element to
+          change them as the requirements using getElementById() querySelector()
+          querySelectorAll() etc.
+        </p>
+      </div>
+      <div class="border-0 rounded-lg bg-amber-400 md:mx-12 text-xl p-4 mt-4">
+        <p>
+          Question 02 : How will you select HTML elements using DOM? Name the
+          DOM methods. <br />
+          Ans: <br />
+          To select HTML element using DOM, we can use various method. Like for
+          example, to select the id we could use getElementById(), to select the
+          class we could use getElementsByClassName() etc. Here is an exaple of
+          hoe to select this method:<br />
+          const myElement = document.getElementById("myId"); <br />
+          There is also many more methods. Example_ querySelector(),
+          getElementsByTagName() etc.
+        </p>
+      </div>
+      <div class="border-0 rounded-lg bg-lime-400 md:mx-12 text-xl p-4 mt-4">
+        <p>
+          Question 03 : What is event bubble? <br />
+          Ans: <br />
+          Suppose we have a button element inside a div element, and we click on
+          the button, the click event will first be triggered on the button
+          element, and then it will bubble up and trigger the same event on the
+          div element that contains the button. If there are more parent
+          elements, the event will continue to bubble up until it reaches the
+          root element of the document. This is called the bubble event.
+        </p>
+      </div>
+      <div
+        class="border-0 rounded-lg bg-cyan-500 md:mx-12 text-xl p-4 mt-4 mb-4"
+      >
+        <p>
+          Question 04 : What is a callback function and why will you use it?
+          <br />
+          Ans: <br />
+          A callback function is a function that is passed as an argument to
+          another function. A common use case for callback functions is
+          asynchronous programming. When a function needs to perform an
+          asynchronous operation, such as fetching data from a server, it cannot
+          return the result immediately. Instead, it can accept a callback
+          function as an argument.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
