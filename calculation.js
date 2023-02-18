@@ -16,35 +16,45 @@ function inputField(id1) {
   }
 }
 
-function resultTriangle(id1, result) {
+function resultTriangle(id1, result, name) {
   const result2 = document.getElementById(id1);
-  const new1 = document.createElement("p");
-  new1.innerText = result;
-  result2.appendChild(new1);
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+  <td class="pb-10"></td>
+  <td>${serial}&emsp;</td>
+  <td>${name}&emsp;</td>
+  <td>${result}cm<sup>2</sup></td>
+  <td><button
+  class="border-0 rounded-md bg-blue-600 text-white p-1 px-2 ml-10"
+>
+  Convert to m<sup>2</sup>
+</button>&emsp;</td>
+  `;
+  result2.appendChild(tr);
 }
 
 const color1 = document.getElementsByClassName("background-hover");
 for (const color2 of color1) {
   color2.addEventListener("mouseover", function () {
-    console.log("Checking");
     let color = "#";
     color += Math.random().toString(16).slice(2, 8);
     color2.style.backgroundColor = color;
   });
 }
 
+let serial = 0;
 document
   .getElementById("triangle-button")
   .addEventListener("click", function () {
+    serial += 1;
     let firstValue = inputField("triangle-input-01");
     let secondValue = inputField("triangle-input-02");
     const triangleResult = 0.5 * firstValue * secondValue;
     if (isNaN(triangleResult)) {
       return;
     } else {
-      const triangleResult2 =
-        "Triangle   " + triangleResult.toFixed(2) + "cm(square)";
-      resultTriangle("result-show", triangleResult2);
+      let name = "Triangle";
+      resultTriangle("result-show", triangleResult, name);
     }
   });
 document.getElementById("rectangle-btn").addEventListener("click", function () {
