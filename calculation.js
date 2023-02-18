@@ -25,6 +25,8 @@ document
     if (isNaN(triangleResult)) {
       return;
     } else {
-      console.log(triangleResult.toFixed(2));
+      const result2 = document.getElementById("result-show");
+      const triangleResult2 = "Triangle " + triangleResult.toFixed(2);
+      result2.innerText = triangleResult2;
     }
   });
