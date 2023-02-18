@@ -54,68 +54,68 @@ document
       return;
     } else {
       let name = "Triangle";
-      resultTriangle("result-show", triangleResult, name);
+      resultTriangle("result-show", triangleResult.toFixed(2), name);
     }
   });
 document.getElementById("rectangle-btn").addEventListener("click", function () {
+  serial += 1;
   let firstValue = inputField("rectangle-input-01");
   let secondValue = inputField("rectangle-input-02");
   const rectangleResult = firstValue * secondValue;
   if (isNaN(rectangleResult)) {
     return;
   } else {
-    const rectangleResult2 =
-      "Rectangle  " + rectangleResult.toFixed(2) + "cm(square)";
-    resultTriangle("result-show", rectangleResult2);
+    let name = "Rectangle";
+    resultTriangle("result-show", rectangleResult.toFixed(2), name);
   }
 });
 document
   .getElementById("parallelogram-btn")
   .addEventListener("click", function () {
+    serial += 1;
     let firstValue = inputField("parallelogram-input-01");
     let secondValue = inputField("parallelogram-input-02");
     const parallelogramResult = firstValue * secondValue;
     if (isNaN(parallelogramResult)) {
       return;
     } else {
-      const parallelogramResult2 =
-        "Parallelogram  " + parallelogramResult.toFixed(2) + "cm(square)";
-      resultTriangle("result-show", parallelogramResult2);
+      let name = "Parallelogram";
+      resultTriangle("result-show", parallelogramResult.toFixed(2), name);
     }
   });
 document.getElementById("rhombus-btn").addEventListener("click", function () {
+  serial += 1;
   let firstValue = inputField("rhombus-input-01");
   let secondValue = inputField("rhombus-input-02");
   const rhombusResult = 0.5 * firstValue * secondValue;
   if (isNaN(rhombusResult)) {
     return;
   } else {
-    const rhombusResult2 =
-      "Rhombus  " + rhombusResult.toFixed(2) + "cm(square)";
-    resultTriangle("result-show", rhombusResult2);
+    let name = "Rhombus";
+    resultTriangle("result-show", rhombusResult.toFixed(2), name);
   }
 });
 document.getElementById("pentagon-btn").addEventListener("click", function () {
+  serial += 1;
   let firstValue = inputField("pentagon-input-01");
   let secondValue = inputField("pentagon-input-02");
   const pentagonResult = 0.5 * firstValue * secondValue;
   if (isNaN(pentagonResult)) {
     return;
   } else {
-    const pentagonResult2 =
-      "Pentagon  " + pentagonResult.toFixed(2) + "cm(square)";
-    resultTriangle("result-show", pentagonResult2);
+    let name = "Pentagon";
+    resultTriangle("result-show", pentagonResult.toFixed(2), name);
   }
 });
 document.getElementById("ellipse-btn").addEventListener("click", function () {
+  serial += 1;
   let firstValue = inputField("ellipse-input-01");
   let secondValue = inputField("ellipse-input-02");
   const ellipseResult = 3.14 * firstValue * secondValue;
   if (isNaN(ellipseResult)) {
     return;
   } else {
-    const ellipseResult2 =
-      "Ellipse  " + ellipseResult.toFixed(2) + "cm(square)";
-    resultTriangle("result-show", ellipseResult2);
+    let name = "Ellipse";
+    resultTriangle("result-show", ellipseResult.toFixed(2), name);
   }
 });
