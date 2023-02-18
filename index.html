@@ -59,12 +59,13 @@
             <div class="flex mx-auto">
               <input
                 type="text"
-                id=""
+                id="rectangle-input-01"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2"
                 placeholder="w"
               />
               <p class="my-auto ml-1">cm</p>
               <input
+                id="rectangle-input-02"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2 ml-2"
                 placeholder="l"
@@ -73,6 +74,7 @@
             </div>
             <button
               class="border-0 rounded-lg bg-blue-600 text-white font-semibold my-6 py-4 px-24 text-xl mx-auto"
+              id="rectangle-btn"
             >
               Calculate
             </button>
@@ -83,12 +85,14 @@
             <p class="mt-1 text-center">Area(A) = b ☓ h</p>
             <div class="flex mx-auto">
               <input
+                id="parallelogram-input-01"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2"
                 placeholder="b"
               />
               <p class="my-auto ml-1">cm</p>
               <input
+                id="parallelogram-input-02"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2 ml-2"
                 placeholder="h"
@@ -97,6 +101,7 @@
             </div>
             <button
               class="border-0 rounded-lg bg-blue-600 text-white font-semibold my-6 py-4 px-24 text-xl mx-auto"
+              id="parallelogram-btn"
             >
               Calculate
             </button>
@@ -109,20 +114,23 @@
             </p>
             <div class="flex mx-auto">
               <input
+                id="rhombus-input-01"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2"
-                placeholder="b"
+                placeholder="d1"
               />
               <p class="my-auto ml-1">cm</p>
               <input
+                id="rhombus-input-02"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2 ml-2"
-                placeholder="h"
+                placeholder="d2"
               />
               <p class="my-auto ml-1">cm</p>
             </div>
             <button
               class="border-0 rounded-lg bg-blue-600 text-white font-semibold my-6 py-4 px-24 text-xl mx-auto"
+              id="rhombus-btn"
             >
               Calculate
             </button>
@@ -133,20 +141,23 @@
             <p class="mt-1 text-center">Area(A) = 0.5 ☓ p ☓ b</p>
             <div class="flex mx-auto">
               <input
+                id="pentagon-input-01"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2"
-                placeholder="b"
+                placeholder="p"
               />
               <p class="my-auto ml-1">cm</p>
               <input
+                id="pentagon-input-02"
                 type="text"
                 class="border-0 rounded-lg bg-slate-200 p-0.5 mt-2 w-28 pl-2 ml-2"
-                placeholder="h"
+                placeholder="b"
               />
               <p class="my-auto ml-1">cm</p>
             </div>
             <button
               class="border-0 rounded-lg bg-blue-600 text-white font-semibold my-6 py-4 px-24 text-xl mx-auto"
+              id="pentagon-btn"
             >
               Calculate
             </button>
@@ -177,15 +188,19 @@
           </div>
         </div>
         <div class="h-96 md:ml-80 border rounded-lg">
-          <p class="text-xl font-bold mt-4 text-center underline">
+          <p class="text-xl font-bold mt-4 text-center underline mb-10">
             Area Calculation
           </p>
-          <p id="result-show"></p>
-          <button
-            class="border-0 rounded-md bg-blue-600 text-white p-1 px-2 hidden"
-          >
-            Convert to m<sup>2</sup>
-          </button>
+          <p id="result-show" class="ml-10">
+            <span class="hidden"
+              >cm<sup>2</sup>
+              <button
+                class="border-0 rounded-md bg-blue-600 text-white p-1 px-2 ml-10"
+              >
+                Convert to m<sup>2</sup>
+              </button></span
+            >
+          </p>
         </div>
       </section>
     </main>
