@@ -9,7 +9,7 @@ function inputField(id1) {
     return alert("Please Enter the correct value");
   } else {
     if (finalValue < 0) {
-      return alert("Please Enter the posu correct value");
+      return alert("Please Enter the correct value");
     } else {
       return finalValue;
     }
@@ -21,6 +21,16 @@ function resultTriangle(id1, result) {
   const new1 = document.createElement("p");
   new1.innerText = result;
   result2.appendChild(new1);
+}
+
+const color1 = document.getElementsByClassName("background-hover");
+for (const color2 of color1) {
+  color2.addEventListener("mouseover", function () {
+    console.log("Checking");
+    let color = "#";
+    color += Math.random().toString(16).slice(2, 8);
+    color2.style.backgroundColor = color;
+  });
 }
 
 document
@@ -87,15 +97,15 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
     resultTriangle("result-show", pentagonResult2);
   }
 });
-document.getElementById("pentagon-btn").addEventListener("click", function () {
-  let firstValue = inputField("pentagon-input-01");
-  let secondValue = inputField("pentagon-input-02");
-  const pentagonResult = 0.5 * firstValue * secondValue;
-  if (isNaN(pentagonResult)) {
+document.getElementById("ellipse-btn").addEventListener("click", function () {
+  let firstValue = inputField("ellipse-input-01");
+  let secondValue = inputField("ellipse-input-02");
+  const ellipseResult = 3.14 * firstValue * secondValue;
+  if (isNaN(ellipseResult)) {
     return;
   } else {
-    const pentagonResult2 =
-      "Pentagon  " + pentagonResult.toFixed(2) + "cm(square)";
-    resultTriangle("result-show", pentagonResult2);
+    const ellipseResult2 =
+      "Ellipse  " + ellipseResult.toFixed(2) + "cm(square)";
+    resultTriangle("result-show", ellipseResult2);
   }
 });
